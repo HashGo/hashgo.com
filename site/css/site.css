@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Fauna One', "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: #B1F1FE;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.scrollable{
+  overflow: hidden;
+}
+
+
+.center{
+  text-align: center;
+}
+
+
+.navbar-inverse .navbar-inner {
+  
+  background-color: rgba(51, 51, 51, .80);
+  background-image: none;
+  background-repeat: repeat-x;
+  border-color: #333;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+}
+
+.navbar-inverse .nav .active{
+  height: 42px;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  color: #fff;
+  background-color: rgba(51, 51, 51, .35);
+}
+
+
+.brand{
+  position: relative;
+  text-shadow: none;
+  font-family: 'Concert One', "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.brand img{
+  top: 6px;
+  position: absolute;
+  height: 30px;
+}
+
+.brand span{
+  color: #fff;
+  padding-left: 30px;
+  text-shadow: none;
+  font-size: 22px;
+}
+
+.navbar-inverse .nav{
+  float: right;
+}
+
+.navbar-inverse .nav > li > a{
+  font-size: 14px;
+  padding: 12px 15px 10px;
+}
+
+
+.navbar-inverse .btn-navbar {
+  color: #ffffff;
+  background-color: transparent;
+  *background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+       box-shadow: none;
+}
+
+
+
+.navbar-inverse .btn-navbar:hover,
+.navbar-inverse .btn-navbar:focus,
+.navbar-inverse .btn-navbar:active,
+.navbar-inverse .btn-navbar.active,
+.navbar-inverse .btn-navbar.disabled,
+.navbar-inverse .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: rgba(51, 51, 51, .35);
+  *background-color: rgba(51, 51, 51, .35);
+}
+
+
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+}
+
+
+.navbar-inverse .nav-collapse .nav > li > a,
+.navbar-inverse .nav-collapse .dropdown-menu a {
+  color: #fff;
+  text-shadow: none;
+}
+
+
+.navbar-inverse .nav-collapse .nav > li > a:hover,
+.navbar-inverse .nav-collapse .nav > li > a:focus,
+.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+  background-color: rgba(51, 51, 51, .35);
+}
+
+
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+  padding: 0px;
+}
+
+.nav-collapse .nav {
+  margin: 0 0 -2px;
+}
+
+.nav-collapse .nav > li > a,
+.nav-collapse .dropdown-menu a {
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+}
+.nav-collapse .btn {
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+}
+
+
+.btn{
+  border-radius: 0px;
+}
+
+.section{
+  background-color: #fff;
+  padding: 30px 0px;
+  border-top: solid 2px #eee;
+  border-bottom: solid 2px #eee;
+}
+
+.section p{
+  text-align: justify;
+  margin: 10px 0px;
+}
+
+
+
+
+.doodle-wrap, .doodle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  background-attachment: fixed;
+  background-position: 50% 0px;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.doodle-top{
+  background-image: url(../img/Top2000x1200.png);
+  z-index: 3;
+}
+
+
+.doodle-middle{
+  background-image: url(../img/Middle2000x1200.png);
+  z-index: 2;
+}
+
+
+.doodle-back{
+  background-image: url(../img/Back2000x1200.png);
+  z-index: 1;
+}
+
+.headline{
+  font-family: 'Pathway Gothic One', serif;
+  color: #333;
+  text-align: center;
+  line-height: 40px;
+  height: 600px;
+  position: relative;
+}
+
+.headline h1{
+  position: relative;
+  top: 300px;
+  font-size: 80px;
+  z-index: 10;
+  margin-top: 0;
+}
+
+
+
+.spacer{
+  position: relative;
+  height: 200px;
+}
+
+.section .asset{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section .asset img{
+  width: 40%;
+}
+
+.spacer-vision .doodle{
+  background-position: 50% -1000px;
+}
+
+
+.spacer-vision .doodle-middle{
+  background-position: 50% -1500px;
+}
+
+
+.spacer-flagship .doodle{
+  background-position: 50% 700px;
+}
+
+
+
+.spacer-flagship .doodle-middle{
+  background-position: 50% -700px;
+}
+
+
+.section-team a{
+  color: #3AD7FC;
+}
+
+
+.footer{
+  font-family: "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 70px;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  line-height: 75px;
+}

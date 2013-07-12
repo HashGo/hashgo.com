@@ -1,0 +1,101 @@
+/* Large desktop */
+@media (min-width: 1200px) {
+}
+
+/* Tablet and smaller */
+@media (max-width: 979px) {
+  html, body{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    font-size: 12px;
+  }
+
+  .navbar-inverse .nav{
+    float: none;
+  }
+
+
+  .navbar{
+    width: 100%;
+  }
+  .navbar-inner{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+
+  .navbar-fixed-bottom {
+    margin-top: 0px;
+  }
+    .navbar-fixed-top {
+    margin-bottom: 0px;
+  }
+
+  .section .asset img{
+    width: 60%;
+  }
+
+  .section-team .asset img{
+    width: 70%;
+  }
+
+  .headline{
+    height: 300px;
+  }
+  
+  .headline h1{
+    top: 130px;
+  }
+
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+  .section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .headline h1{
+    font-size: 65px;
+  }
+
+  .spacer{
+    height: 150px;
+  }
+
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .headline{
+    height: 150px;
+  }
+  
+  .headline h1{
+    top: 55px;
+    font-size: 35px;
+  }
+
+  .section .asset img{
+    width: 90%;
+  }
+
+
+}
