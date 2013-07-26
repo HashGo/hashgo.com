@@ -1,3 +1,45 @@
+
+
+@font-face {
+  font-family: 'Fauna One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fauna One'), local('FaunaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/faunaone/v1/cSd7NBXNFQWK4oX1706dY7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Offside';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Offside'), local('Offside-Regular'), url(http://themes.googleusercontent.com/static/fonts/offside/v1/kXtToyuSIeDzSauH8LQwXALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'BenchNine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('BenchNine Bold'), local('BenchNine-Bold'), url(http://themes.googleusercontent.com/static/fonts/benchnine/v1/qZpi6ZVZg3L2RL_xoBLxWaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Knewave';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Knewave'), local('Knewave-Regular'), url(http://themes.googleusercontent.com/static/fonts/knewave/v2/QoIkQCg7-RvNFDCSqflgfQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Concert One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Concert One'), local('ConcertOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/concertone/v4/eNLG875uBc3mU2X9z56PW7rIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +52,7 @@ html, body {
   height: 100%;
   font-family: 'Fauna One', "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 22px;
   background-color: #B1F1FE;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -36,7 +78,7 @@ html, body {
 }
 
 .navbar-inverse .nav .active{
-  height: 42px;
+  height: 44px;
 }
 
 .navbar-inverse .nav .active > a,
@@ -44,6 +86,9 @@ html, body {
 .navbar-inverse .nav .active > a:focus {
   color: #fff;
   background-color: rgba(51, 51, 51, .35);
+  border: none;
+  height: 22px;
+  outline: none;
 }
 
 
@@ -66,6 +111,8 @@ html, body {
   padding-left: 30px;
   text-shadow: none;
   font-size: 22px;
+  position: relative;
+  top: -3px;
 }
 
 .navbar-inverse .nav{
@@ -164,6 +211,39 @@ html, body {
   margin: 10px 0px;
 }
 
+.section .arrow{
+  text-align: center;
+}
+
+.section .arrow img{
+  height: 70px;
+}
+
+.headline a div, .section .arrow div{
+  height: 70px;
+  width: 70px;
+  background-position: 0px 0px;
+  margin: 0 auto;
+  background-image: url(../img/AllArrows.png);
+  z-index: 10;
+  position: relative;
+}
+
+.section .arrow{
+  margin-top: 10px;
+}
+
+.section .arrow div:hover{
+  background-position: -70px -70px;
+}
+
+.headline a div{
+  background-position: -70px 0px;
+}
+
+.headline a div:hover{
+  background-position: 0px -70px;
+}
 
 
 
@@ -203,22 +283,36 @@ html, body {
 }
 
 .headline{
-  font-family: 'Pathway Gothic One', serif;
+  font-family: 'BenchNine', serif;
   color: #333;
   text-align: center;
-  line-height: 40px;
-  height: 600px;
+  line-height: 48px;
+  height: 550px;
   position: relative;
 }
 
 .headline h1{
   position: relative;
-  top: 300px;
+  top: 230px;
   font-size: 80px;
   z-index: 10;
   margin-top: 0;
 }
 
+
+.headline a{
+  position: relative;
+  z-index: 10;
+  top: 260px;
+}
+
+.headline img{
+  height: 70px;
+}
+
+.headline img:hover{
+  opacity: .8;
+}
 
 
 .spacer{
@@ -235,12 +329,12 @@ html, body {
   width: 40%;
 }
 
-.spacer-vision .doodle{
+.spacer-mission .doodle{
   background-position: 50% -1000px;
 }
 
 
-.spacer-vision .doodle-middle{
+.spacer-mission .doodle-middle{
   background-position: 50% -1500px;
 }
 
@@ -248,6 +342,12 @@ html, body {
 .spacer-flagship .doodle{
   background-position: 50% 700px;
 }
+
+
+.section-flagship .asset img{
+  width: 30%;
+}
+
 
 
 
@@ -263,10 +363,93 @@ html, body {
 
 .footer{
   font-family: "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  height: 70px;
   background-color: #333;
   text-align: center;
   color: #fff;
   font-size: 12px;
-  line-height: 75px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  position: relative;
 }
+
+.footer .title{
+  font-size: 18px;
+  font-weight: 700px;
+  margin-bottom: 5px;
+}
+
+
+.footer .contact{
+  text-align: left;
+}
+
+.footer .address{
+  text-align: right;
+}
+
+
+.footer a{
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.footer .copy{
+  position: relative;
+  top: -15px;
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.investors{
+  text-align: center;
+}
+.investors .gc{
+  background-color: #1c1c1c;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px
+}
+
+
+.investors .ev{
+  background-color: #282B37;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px
+}
+
+
+.investors .ss{
+  width: 175px;
+  position: relative;
+  top: -5px;
+}
+
+
+.callouts{
+  font-family: 'Knewave', cursive;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 34px;
+  text-align: left !important;
+  margin-left: 10px;
+}
+
+.callouts span{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: left !important;
+  display: block;
+}
+
+.section-mission .callouts, .section-team .callouts{
+  margin-top: 40px ;
+}
+
+
+.section-flagship .callouts{
+  margin-top: 30px ;
+}
+

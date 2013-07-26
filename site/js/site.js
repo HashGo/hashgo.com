@@ -1,31 +1,48 @@
 (function(){
   $(document).ready(function(){
-    var topDoodleSpeed = 0.2;
-    var middleDoodleSpeed = 0.1;
-    var backDoodleSpeed = 0.05;
-
-    var headlineDoodleOffset = 10;
-
-
-
     $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function(e){
       if ( e.which > 0 || e.type == "mousedown" || e.type == "mousewheel"){
         $("html,body").stop();
       }
     });
 
-
-    $(".nav a").click(function(e){
-      e.preventDefault();
-      $(".nav .active").removeClass("active");
-      $(e.currentTarget).parent().addClass("active");
-      var id = $(e.currentTarget).attr("href");
+    function scrollHandler(id){
       $.scrollTo($(id), {
-        duration: 1000,
+        duration: 2000,
         easing: "easeOutExpo",
         offset: -60,
         axis: "y"
       });
+    }
+
+    $("a.brand").click(function(e){
+      e.preventDefault();
+      scrollHandler("body");
+    });
+
+
+    $(".nav a").click(function(e){
+      if($(e.currentTarget).attr("href").indexOf("mailto") != -1){
+        return;
+      }
+      e.preventDefault();
+      $(".nav .active").removeClass("active");
+      $(e.currentTarget).parent().addClass("active");
+      scrollHandler($(e.currentTarget).attr("href"));
+    });
+
+    $(".section a").click(function(e){
+      if($(e.currentTarget).attr("href").indexOf("#") != 0){
+        return;
+      }
+      e.preventDefault();
+      scrollHandler($(e.currentTarget).attr("href"));
+    });
+
+
+    $(".headline a").click(function(e){
+      e.preventDefault();
+      scrollHandler("#mission");
     });
 
     function isMobileDevice() {
@@ -40,38 +57,9 @@
         verticalOffset: 40
       });
     }else{
-      $(".content-wrap").addClass("scrollable vertical");
-      $(".scrollable").stellar({
-        horizontalScrolling: false,
-        scrollProperty: 'transform',
-        positionProperty: 'transform',
-        verticalOffset: 40
-      });
-
-      //Prevent text selection
-      $(document).mousedown(function(e){
-        e.preventDefault();
-      });
+      // fix for ios background image zooming
+      $(".doodle-wrap, .doodle").css("background-attachment", "local");
     }
-    /*
-    $(document).on('scroll', function() {
-      var offset = $(document).scrollTop();
-      var top = $(".headline .doodle-top");
-      var topOffset = headlineDoodleOffset - (offset * topDoodleSpeed);
-      top.css("background-position-y", topOffset + "px");
-
-      var middle = $(".headline .doodle-middle");
-      var midOffset = headlineDoodleOffset - (offset * middleDoodleSpeed);
-      middle.css("background-position-y", midOffset + "px");
-
-
-      var back = $(".headline .doodle-middle");
-      var backOffset = headlineDoodleOffset - (offset * backDoodleSpeed);
-      back.css("background-position-y", backOffset + "px");
-
-    });
-    */
-
   });
 })();
 
