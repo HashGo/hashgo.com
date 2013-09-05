@@ -58,6 +58,10 @@ html, body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+a{
+  color: #3AD7FC;
+}
+
 .scrollable{
   overflow: hidden;
 }
@@ -356,9 +360,6 @@ html, body {
 }
 
 
-.section-team a{
-  color: #3AD7FC;
-}
 
 
 .footer{
